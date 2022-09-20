@@ -16,7 +16,7 @@ function searchCountries(event) {
   event.preventDefault();
   const searchQuery = event.target.value.trim();
 
-  //Fetch запрос
+  //Fetch search
   fetchCountries(searchQuery).then(onCountry).catch(onError);
 }
 
