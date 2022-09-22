@@ -15,7 +15,7 @@ refs.input.addEventListener('input', debounce(searchCountries, DEBOUNCE_DELAY));
 function searchCountries(event) {
   event.preventDefault();
   const searchQuery = event.target.value.trim();
-
+  if (searchQuery === '') { return };
   //Fetch search
   fetchCountries(searchQuery).then(onCountry).catch(onError);
 }
